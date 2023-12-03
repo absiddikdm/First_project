@@ -29,13 +29,13 @@ class PostController extends Controller
      //thumbnail
      $thumbnail = $request->thumbnail;
     $extension = $thumbnail->extension();
-   $thum_name = str_replace(' ', '_',Str::lower(substr($request->title, 0, 500))). '_'.random_int(10000,99999).'.'.$extension;
+   $thum_name = str_replace(' ', '_',Str::lower(substr($request->title, 0, 5000))). '_'.random_int(10000,99999).'.'.$extension;
      Image::make($thumbnail)->save(public_path('uploads/post/thumb/'. $thum_name));
 
         //cover
      $cover_image = $request->cover_image;
      $extension2 = $thumbnail->extension();
-     $cover_name = str_replace(' ', '_',Str::lower(substr($request->title, 0, 500))). '_'.random_int(10000,99999).'.'.$extension2;
+     $cover_name = str_replace(' ', '_',Str::lower(substr($request->title, 0, 5000))). '_'.random_int(10000,99999).'.'.$extension2;
      Image::make($cover_image)->save(public_path('uploads/post/cover/'. $cover_name));
 
         Post::insert([
