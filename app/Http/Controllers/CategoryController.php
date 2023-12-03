@@ -18,7 +18,7 @@ class CategoryController extends Controller
    function category_store(Request $request){
     $request->validate([
         'category_name'=>'required|unique:Categories',
-        'category_image'=>['required','mimes:jpg,bmp,png,webp','max:5120'],
+        'category_image'=>['required','mimes:jpg,bmp,png,webp,','max:5120'],
     ]);
 
     $image =$request->category_image;
