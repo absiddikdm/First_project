@@ -84,6 +84,7 @@ Route::get('/add/post', [PostController::class, 'add_post'])->name('add.post');
 Route::POST('/post/store', [PostController::class, 'post_store'])->name('post.store');
 Route::get('/post/listt', [PostController::class, 'post_list'])->name('post.list');
 Route::get('/status/change/{id}', [PostController::class, 'status_change'])->name('status.change');
+Route::get('post/delete{id}', [PostController::class, 'post_delete'])->name('post.delete');
 
 //subscribe
 Route::post('/subscribe/store', [SubscribeController::class, 'subscribe_store'])->name('subscribe.store');

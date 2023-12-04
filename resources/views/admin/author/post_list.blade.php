@@ -26,7 +26,7 @@
 
                     <td><a href="{{route('status.change', $post->id)}}" class="btn btn-{{$post->status == 0?'secondary':'success'}}"> {{ $post->status == 0?'Deactive':'Active' }} </a></td>
                     <td>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="{{route('post.delete',$post->id)}} " class="btn btn-danger">Delete</a>
                     </td>
                  </tr>
                  @endforeach

@@ -74,4 +74,8 @@ class PostController extends Controller
     }
     return back();
    }
+   function post_delete($id){
+      Post::find($id)->delete();
+      return back();
+   }
 }
